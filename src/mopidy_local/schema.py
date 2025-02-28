@@ -117,7 +117,7 @@ _BROWSE_FILTERS = {
 
 _LOOKUP_QUERIES = {
     RefType.ALBUM: """
-    SELECT * FROM tracks WHERE album_uri = ?
+    SELECT * FROM tracks WHERE album_uri = ? ORDER BY track_no ASC
     """,
     RefType.ARTIST: """
     SELECT * FROM tracks WHERE ? IN (artist_uri, albumartist_uri)
